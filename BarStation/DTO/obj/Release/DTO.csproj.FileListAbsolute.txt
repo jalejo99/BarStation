@@ -1,0 +1,9 @@
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\DTO\bin\Release\DTO.dll.config
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\DTO\bin\Release\DTO.dll
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\DTO\bin\Release\DTO.pdb
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\DTO\bin\Release\MySql.Data.dll
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\DTO\obj\Release\DTO.csprojAssemblyReference.cache
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\DTO\obj\Release\DTO.csproj.CoreCompileInputs.cache
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\DTO\obj\Release\DTO.csproj.CopyComplete
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\DTO\obj\Release\DTO.dll
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\DTO\obj\Release\DTO.pdb

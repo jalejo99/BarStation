@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BarStation.Services.ServiceComandas" CodeBehind="ServiceComandas.svc.cs" %>

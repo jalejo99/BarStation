@@ -1,0 +1,220 @@
+﻿:root {
+    --primario: #256d7b;
+    --primarioOscuro: #225c67;
+    --secudario: #e9954c;
+    --secundarioOscuro: #cba400;
+    --blanco: #fff;
+    --negro: #000;
+    --auxiliar: #9C27B0;
+    --fuenteprincipal: 'Staatliches', cursive;
+    --text-color: #34444f;
+    --grisClaro: #b1b1b1;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+    background-color: var(--primario);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+a {
+    /* text-decoration: none; */
+    color: var(--secudario);
+}
+
+img {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--secudario);
+    font-family: var(--fuenteprincipal);
+}
+
+h4 {
+    text-align: center;
+    color: var(--blanco);
+    font-family: var(--fuenteprincipal);
+}
+
+h1 {
+    font-size: 3.9rem;
+}
+
+h2 {
+    font-size: 3.1rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+h4 {
+    font-size: 1.7rem;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    background-color: var(--primarioOscuro);
+    margin-top: 2rem;
+}
+
+.footer__texto {
+    font-family: var(--fuenteprincipal);
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1rem 0rem;
+}
+
+.h1__help {
+    font-size: 3.9rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* estilo drag n drop */
+.draggable-list {
+    color: var(--text-color);
+    padding: 0;
+    list-style-type: none;
+}
+
+    .draggable-list li {
+        background-color: #fff;
+    }
+
+    .draggable-list li {
+        border-bottom: 1px solid var(--grisClaro);
+    }
+
+    .draggable-list .number {
+        background-color: var(--grisClaro);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.75rem;
+        font-family: var(--fuenteprincipal);
+        color: var(--blanco);
+        margin: 0;
+        height: 80px;
+        width: 80px;
+    }
+
+.draggable .tables {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 1.75rem;
+    font-family: var(--fuenteprincipal);
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+}
+
+.draggable {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    flex: 1;
+}
+
+    .draggable:-moz-drag-over {
+        cursor: grabbing;
+    }
+
+    /* botones de los elemento en la lista */
+    .draggable .listButtons .btn {
+        margin: 0.3rem;
+        background-color: var(--secudario);
+        border-radius: 3px;
+        border: none;
+        color: white;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-family: var(--fuenteprincipal);
+    }
+
+        .draggable .listButtons .btn:hover {
+            color: #212529;
+            text-decoration: none;
+        }
+
+/** Grid **/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+
+/* pop ups */
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modalestilo {
+    min-width: 20em;
+    border-width: 5px;
+    border-radius: 5px;
+    background-color: #256d7b;
+    border-color: #e9954c;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.bag{
+    border-color:red;
+}
+.botoncierre {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background-color: var(--secudario);
+    border-radius: 3px;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: var(--fuenteprincipal);
+}
+
+    .botoncierre:hover {
+        color: var(--negro);
+    }
+
+.listaOrden {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: var(--fuenteprincipal);
+    text-align: left;
+}

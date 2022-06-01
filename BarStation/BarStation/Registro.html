@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/Login.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+</head>
+<body>
+    <nav class="navegacion">
+        <a class="navegacion__enlace activo" href="/Registro_plato.html">
+            <span class="material-symbols-outlined">
+                cooking
+            </span> Registro Platos
+        </a>
+        <a class="navegacion__enlace" href="/Registro_inventario.html">
+            <span class="material-symbols-outlined">
+                warehouse
+            </span>Registro de ingredientes
+        </a>
+        <a class="navegacion__enlace" id="aCerrarSesion" href="#">
+            <span class="material-symbols-outlined">
+                close
+            </span>Cerrar sesion
+        </a>
+    </nav>
+    <div class="formulario">
+        <h1>Registrar usuario</h1>
+        <div class="contenedor">
+            <div class="input-contenedor">
+                <i class="fas fa-address-card icon"></i>
+                <input type="text" id="inpCedula" placeholder="Cedula">
+
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" id="inpNombre" placeholder="Nombre">
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-user-circle icon"></i>
+                <input type="text" id="inpApellido" placeholder="Apellido">
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-envelope icon"></i>
+                <input type="text" id="inpCorreoElect" placeholder="Correo Electronico">
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-phone icon"></i>
+                <input type="text" id="inpCelular" placeholder="Celular">
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" id="inpContraseña" placeholder="Contraseña">
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-bars icon"></i>
+                <select class="roles" id="slcRol"></select>
+            </div>
+            <input type="button" id="btnRegistrar" value="Registrate" class="button"> 
+        </div>
+    </div>
+    <script src="Scripts/Sweetalert2.js"></script>
+    <script src="Scripts/jquery-1.8.0.min.js"></script>
+    <script src="js/Login-Registro.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#aCerrarSesion").click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "Services/ServiceComandas.svc/CerrarSesion",
+                    data: '{ }',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    async: false,
+                    processdata: true,
+                    success: function (dato) {
+                        location.href = 'Login.html';
+
+                    }
+                });
+            });
+            $.ajax({
+                type: "POST",
+                url: "Services/ServiceComandas.svc/ValidarSesion",
+                data: '{ }',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: false,
+                processdata: true,
+                success: function (dato) {
+                    var validar = dato.ValidarSesionResult;
+                    if (validar == "No") {
+                        swal({
+                            title: "Alerta",
+                            text: "Inicia seccion para poder acceder",
+                            icon: "warning",
+                            dangerMode: true,
+                        })
+                            .then((willDelete) => {
+                                location.href = 'Login.html';
+                            });
+                    } else if (validar != "Administrador") {
+                        swal({
+                            title: "Alerta",
+                            text: "No tienes acceso",
+                            icon: "warning",
+                            dangerMode: true,
+                        })
+                            .then((willDelete) => {
+                                $("body").remove();
+                            });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\bin\Release\CAD.dll.config
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\bin\Release\CAD.dll
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\bin\Release\CAD.pdb
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\bin\Release\DTO.dll
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\bin\Release\MySql.Data.dll
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\bin\Release\DTO.pdb
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\bin\Release\DTO.dll.config
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\obj\Release\CAD.csprojAssemblyReference.cache
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\obj\Release\CAD.csproj.CoreCompileInputs.cache
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\obj\Release\CAD.csproj.CopyComplete
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\obj\Release\CAD.dll
+F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\obj\Release\CAD.pdb
