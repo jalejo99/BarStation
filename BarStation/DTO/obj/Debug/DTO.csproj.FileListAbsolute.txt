@@ -34,3 +34,12 @@ F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation
 F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\DTO\obj\Debug\DTO.csproj.CopyComplete
 F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\DTO\obj\Debug\DTO.dll
 F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\DTO\obj\Debug\DTO.pdb
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\DTO\bin\Debug\DTO.dll.config
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\DTO\bin\Debug\DTO.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\DTO\bin\Debug\DTO.pdb
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\DTO\bin\Debug\MySql.Data.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\DTO\obj\Debug\DTO.csproj.CopyComplete
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\DTO\obj\Debug\DTO.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\DTO\obj\Debug\DTO.pdb

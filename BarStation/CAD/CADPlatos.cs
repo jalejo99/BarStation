@@ -193,5 +193,109 @@ namespace CAD
             }
             return validar;
         }
+
+        public String[] restarInventario(String[] platos,int valirdar1)
+        {
+            String[] val = new String[3] { null,null,null};
+            List<DTOIngredientes> arringe = new List<DTOIngredientes>();
+
+            int validar = 0;
+            try
+            {
+                for (int k = 0; k < platos.Length - 1; k++)
+                {
+
+                    String[] asd = platos[k].Split('|');
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "SELECT i.cantidadIngredientes AS 'CantidadIng', i.idIngredientes as 'idIngre',pi.cantIngrediente as 'Ncantidad', i.cantMinIngredientes as 'Cantmin',i.nombreIngredientes AS 'nombre' FROM `platos` as p INNER JOIN platos_ingredientes as pi on p.idPlato=pi.idPlato INNER JOIN ingredientes as i ON pi.idIngrediente=i.idIngredientes  where p.nombrePlato='" + asd[0] + "'";
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    con.Open();
+                    MySqlDataReader dr = cmd.ExecuteReader();
+                    DTOIngredientes ing = new DTOIngredientes();
+                    foreach (var item in dr)
+                    {
+                        ing = new DTOIngredientes();
+                        ing.setNombreIngredientes(dr["nombre"].ToString());
+                        ing.setCantidadIngredientes(int.Parse(dr["CantidadIng"].ToString()));
+                        ing.setIdIngredientes(int.Parse(dr["idIngre"].ToString()));
+                        ing.setCantMinIngredientes(dr["Cantmin"].ToString());
+                        ing.setNcantidad(int.Parse(dr["Ncantidad"].ToString()));
+                        ing.setEstado(asd[1]);
+                        arringe.Add(ing);
+                    }
+                    con.Close();
+                    try
+                    {
+                        DTOIngredientes ingre;
+                        int validarInve = 0;
+                        for (int i = 0; i < arringe.Count; i++)
+                        {
+                            ingre = arringe[i];
+                            int cambio = ingre.getCantidadIngredientes() - (ingre.getNcantidad()*int.Parse(ingre.getEstados()));
+                          
+                            if (int.Parse(ingre.getCantMinIngredientes()) > cambio)
+                            {
+                                val[0] = "info";
+                                val[1] = "No hay " + ingre.getNombreIngredientes() + " para preparar este pedido!";
+                                val[2] = "Upss!!";
+                                validarInve = 1; 
+                            } 
+                        }
+                        if (validarInve==0)
+                        {
+                            for (int i = 0; i < arringe.Count; i++)
+                            {
+                                ingre = arringe[i]; 
+                                int cambio = ingre.getCantidadIngredientes() - (ingre.getNcantidad() * int.Parse(ingre.getEstados()));
+
+                                MySqlCommand cmd2 = new MySqlCommand();
+                                cmd2.Connection = con;
+                                cmd2.CommandText = "UPDATE `ingredientes` SET `cantidadIngredientes`='" + cambio + "' WHERE  idIngredientes='" + ingre.getIdIngredientes() + "'";
+                                cmd.CommandType = System.Data.CommandType.Text;
+                                con.Open();
+                                validar = cmd2.ExecuteNonQuery();
+                                con.Close();
+                            }
+                        }
+                        
+
+
+
+                    }
+                    catch (Exception ex)
+                    { 
+                        con.Close();
+                    }
+
+                }
+                if (validar != 0)
+                {
+                    for (int i = 0; i < platos.Length - 1; i++)
+                    {
+                        String[] asd = platos[i].Split('|');
+                        validar = new CAD.CADComandas().CrearComanda_platos(new DTO.DTOPlatos(0, asd[0], 0, 1), valirdar1, int.Parse(asd[1]));
+                    }
+                    if (validar != 0)
+                    {
+                        val[0] = "success";
+                        val[1] = "Comanda creada correctamente";
+                        val[2] = "Genial!!";
+
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                val[0] = "error";
+                val[1] = "Algo a salido mal!";
+                val[2] = "Upss!!";
+                con.Close();
+            }
+
+
+            return val;
+        }
+
     }
 }

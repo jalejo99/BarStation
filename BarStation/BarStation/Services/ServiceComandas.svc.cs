@@ -28,18 +28,14 @@ namespace BarStation.Services
         }
 
         //Creamos las comandas en base al numero de platos y el id de la mesa
-        public int CrearComandas(String Platos, int idMesa)
+        public String[] CrearComandas(String Platos, int idMesa, string Comentario)
         {
-            int validar = 0;
-            int valirdar1 = new CAD.CADComandas().CrearComanda(new DTOMesas(idMesa, 1));
+            String[] validar = new string[2];
+            int valirdar1 = new CAD.CADComandas().CrearComanda(new DTOMesas(idMesa, 1), Comentario);
             if (valirdar1 != 0)
             { 
                 String[] men = Platos.Split('*');
-                for (int i = 0; i < men.Length-1; i++)
-                {
-                    String[] asd = men[i].Split('|');
-                     validar=new CAD.CADComandas().CrearComanda_platos(new DTO.DTOPlatos(0, asd[0], 0, 1),valirdar1,int.Parse(asd[1]));
-                }
+                validar = new CAD.CADPlatos().restarInventario(men, valirdar1);
 
             }
             
@@ -202,6 +198,14 @@ namespace BarStation.Services
         public void CerrarSesion()
         {
             HttpContext.Current.Session.RemoveAll();
+        }
+
+        public string ValidarUsuarioCreado(String cedula,String correos)
+        {
+            DTOUsuarios usu = new DTOUsuarios();
+            usu.setCedulaUsu(int.Parse(cedula));
+            usu.setCorreoUsu(correos);
+            return new CAD.CADUsuario().ValidarUsuarioCreado(usu);
         }
     }
 }

@@ -46,3 +46,15 @@ F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation
 F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\obj\Debug\CAD.csproj.CopyComplete
 F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\obj\Debug\CAD.dll
 F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\CAD\obj\Debug\CAD.pdb
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\CAD\obj\Debug\CAD.csprojAssemblyReference.cache
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\CAD\obj\Debug\CAD.csproj.CoreCompileInputs.cache
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\CAD\obj\Debug\CAD.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\CAD\obj\Debug\CAD.pdb
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\CAD\bin\Debug\CAD.dll.config
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\CAD\bin\Debug\CAD.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\CAD\bin\Debug\CAD.pdb
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\CAD\bin\Debug\DTO.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\CAD\bin\Debug\MySql.Data.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\CAD\bin\Debug\DTO.pdb
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\CAD\bin\Debug\DTO.dll.config
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\CAD\obj\Debug\CAD.csproj.CopyComplete

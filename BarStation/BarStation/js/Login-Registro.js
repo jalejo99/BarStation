@@ -63,29 +63,47 @@ $(document).ready(function () {
             var datos = $("#inpCedula").val() + "|" + $("#inpNombre").val() + "|" + $("#inpApellido").val() + "|" + $("#inpCorreoElect").val() + "|" + $("#inpCelular").val() + "|" + $("#inpContraseña").val() + "|" +$("#slcRol option:selected").attr("name");
             $.ajax({
                 type: "POST",
-                url: "Services/ServiceComandas.svc/Insertar_Usuario",
-                data: '{"datos":"' + datos + '"}',
+                url: "Services/ServiceComandas.svc/ValidarUsuarioCreado",
+                data: '{"cedula":"' + $("#inpCedula").val() + '","correos":"' + $("#inpCorreoElect").val() + '"}',
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 async: false,
                 processdata: true,
                 success: function (dato) {
-                    var valor = dato.Insertar_UsuarioResult;
-                    if (valor == "0") {
-                        swal("Upps!", "Usuario no registrado!", "error");
-                    } else if (valor == "1") {
-                        swal("Buen trabajo!", "Usuario registrado correctamente!", "success");
-                        $("#inpCedula").val("");
-                        $("#inpNombre").val("");
-                        $("#inpApellido").val("");
-                        $("#inpCorreoElect").val("");
-                        $("#inpCelular").val("");
-                        $("#inpContraseña").val("");
-                        TraerRoles();
-                    }
+                    var valor2 = dato.ValidarUsuarioCreadoResult;
+                    if (valor2 != 0) {
+                        swal("Upps!", "Usuario ya registrado!", "error");
+                    } else {
+                        $.ajax({
+                            type: "POST",
+                            url: "Services/ServiceComandas.svc/Insertar_Usuario",
+                            data: '{"datos":"' + datos + '"}',
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            async: false,
+                            processdata: true,
+                            success: function (dato) {
+                                var valor = dato.Insertar_UsuarioResult;
+                                if (valor == "0") {
+                                    swal("Upps!", "Usuario no registrado!", "error");
+                                } else if (valor == "1") {
+                                    swal("Buen trabajo!", "Usuario registrado correctamente!", "success");
+                                    $("#inpCedula").val("");
+                                    $("#inpNombre").val("");
+                                    $("#inpApellido").val("");
+                                    $("#inpCorreoElect").val("");
+                                    $("#inpCelular").val("");
+                                    $("#inpContraseña").val("");
+                                    TraerRoles();
+                                }
 
+                            }
+                        });
+                    }
                 }
-            }); 
+            });
+
+        
         }
     });
 

@@ -15,6 +15,7 @@ namespace DTO
         private String cantMinIngredientes;
         private int idMedida;
         private int precioUni;
+        private int Ncantidad;
         private String medidas;
         private String estados;
 
@@ -78,6 +79,19 @@ namespace DTO
         /**
          * @return the idIngredientes
          */
+
+        public int getNcantidad()
+        {
+            return Ncantidad;
+        }
+
+        /**
+         * @param idIngredientes the idIngredientes to set
+         */
+        public void setNcantidad(int Ncantidad)
+        {
+            this.Ncantidad = Ncantidad;
+        }
         /**
        * @return the idIngredientes
        */

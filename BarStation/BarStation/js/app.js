@@ -92,23 +92,20 @@ $(document).ready(function () {
           
         }
         Mesa = $(this).attr("name");
+        var comentario = $("#txtComentario").val();
+        alert(comentario);
         $.ajax({
             type: "POST",
             url: "Services/ServiceComandas.svc/crearComandas",
-            data: '{"Platos": "' + Platos + '", "idMesa": "' + Mesa + '"}',
+            data: '{"Platos": "' + Platos + '", "idMesa": "' + Mesa + '","Comentario":"' + comentario+'"}',
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             async: false,
             processdata: true,
             success: function (Fotos) {
-                var num = Fotos.CrearComandasResult; 
-                if (num == 1) {
-                    swal("Genial!", "La comanda se a creado correctamente!", "success");
-                    cargarPlato(0);
-                } else {
-
-                    swal("Upss!", "Error al crear la comanda!", "error");
-                }
+                var num = Fotos.CrearComandasResult;  
+                swal(num[2], num[1], num[0]);
+                    cargarPlato(0); 
             }
         });
         modal.close();

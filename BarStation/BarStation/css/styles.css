@@ -209,6 +209,14 @@ h4 {
     border: gray;
 }
 
+.txtArea {
+    height: 80px;
+    width: 250px;
+    border-radius: 7px;
+    margin-left: 16px;
+    border: gray;
+}
+
 #slcPlatos {
     width: 400px;
     height: 100px;

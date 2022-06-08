@@ -62,5 +62,30 @@ namespace CAD
             }
             return validar;
         }
+
+        public string ValidarUsuarioCreado(DTOUsuarios Usu)
+        {
+            string validar = "0";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "SELECT * FROM `usuarios` WHERE `cedulaUsu`='"+ Usu .getCedulaUsu()+ "' OR `correoUsu`='"+Usu.getCorreoUsu()+"'";
+                cmd.CommandType = System.Data.CommandType.Text;
+                con.Open();
+                MySqlDataReader dr = cmd.ExecuteReader();
+                foreach (var item in dr)
+                {
+                    validar="1";
+                }
+                con.Close(); 
+
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+            }
+            return validar;
+        }
     }
 }

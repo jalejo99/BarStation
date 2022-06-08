@@ -170,3 +170,46 @@ F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation
 F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\BarStation\obj\Debug\BarStation.csproj.CopyComplete
 F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\BarStation\obj\Debug\BarStation.dll
 F:\Universidad\6to Semestre\Proyecto de construccion de SW\BarStation\BarStation\Nueva carpeta\BarStation\BarStation\obj\Debug\BarStation.pdb
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\BarStation.dll.config
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\BarStation.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\BarStation.pdb
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\csc.exe
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\csc.exe.config
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\csc.rsp
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\csi.exe
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\csi.rsp
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\System.AppContext.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\System.Collections.Immutable.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\System.IO.FileSystem.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\System.Reflection.Metadata.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\vbc.exe
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\vbc.exe.config
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\vbc.rsp
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\VBCSCompiler.exe
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\roslyn\VBCSCompiler.exe.config
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\CAD.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\DTO.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\MySql.Data.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\CAD.pdb
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\CAD.dll.config
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\DTO.pdb
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\DTO.dll.config
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\obj\Debug\BarStation.csprojAssemblyReference.cache
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\obj\Debug\BarStation.csproj.CoreCompileInputs.cache
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\obj\Debug\BarStation.csproj.CopyComplete
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\obj\Debug\BarStation.dll
+D:\Usuario\Documentos\GitHub\BarStation\BarStation\BarStation\obj\Debug\BarStation.pdb

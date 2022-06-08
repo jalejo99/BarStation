@@ -101,7 +101,7 @@ namespace CAD
         }
 
         //Crear la comanda
-        public int CrearComanda(DTOMesas DMesa)
+        public int CrearComanda(DTOMesas DMesa, String Comentario)
         {
             int idComand = 0;
             try
@@ -109,7 +109,8 @@ namespace CAD
                 idComand = buscarultimaComanda();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = "INSERT INTO `comandas` (`idComandas`, `cedulaCociUsu`, `cedulaCamaUsu`, `idEstado`, `idMesa`) VALUES ('" + idComand + "', NULL, '1035669887', '1', '" + DMesa.getIdMesas() + "')";
+                cmd.CommandText = "INSERT INTO `comandas` (`idComandas`, `cedulaCociUsu`, `cedulaCamaUsu`, `idEstado`, `idMesa`, `comentario`) " +
+                    "VALUES ('" + idComand + "', NULL, (SELECT cedulaUsu FROM `usuarios` WHERE correoUsu='" + HttpContext.Current.Session["Usuario"].ToString() + "'), '1', '" + DMesa.getIdMesas() + "','"+ Comentario+"')";
                 cmd.CommandType = System.Data.CommandType.Text;
                 con.Open();
                 int rows = cmd.ExecuteNonQuery();
@@ -192,5 +193,29 @@ namespace CAD
             }
             return idComand;
         }
+
+        //Modificar Comandas
+        public int Modificar(int idComanda, int estado)
+        {
+            int idComand = 0;
+            try
+            {
+                idComand = buscarultimaComanda();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "UPDATE `comandas` SET `idEstado`='" + estado + "',cedulaCociUsu=(SELECT cedulaUsu FROM `usuarios` WHERE correoUsu='" + HttpContext.Current.Session["Usuario"].ToString() + "') WHERE `idComandas`=" + idComanda;
+                cmd.CommandType = System.Data.CommandType.Text;
+                con.Open();
+                int rows = cmd.ExecuteNonQuery();
+                if (rows == 0) idComand = 0;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+            }
+            return idComand;
+        }
     }
 }
+ 
