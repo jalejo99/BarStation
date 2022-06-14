@@ -24,6 +24,7 @@ function cargarPlato(id) {
     arrycantPlatos[id][0] = id;
     arrycantPlatos[id][1] = 1;
     id = "slcPlato" + id;
+    $("#" + id+">   option").remove();
     $("#" + id).append("<option name='12255522' selected disabled>Seleccione plato</option>"    );
     for (var i = 0; i < arrayPlatos.length; i++) {
         $("#" + id).append("<option name='" + arrayPlatos[i][0]+"'>"+
@@ -92,8 +93,7 @@ $(document).ready(function () {
           
         }
         Mesa = $(this).attr("name");
-        var comentario = $("#txtComentario").val();
-        alert(comentario);
+        var comentario = $("#txtComentario").val(); 
         $.ajax({
             type: "POST",
             url: "Services/ServiceComandas.svc/crearComandas",
@@ -109,6 +109,7 @@ $(document).ready(function () {
             }
         });
         modal.close();
+        $("#txtComentario").val(""); 
             $("#MorePlatos").remove();
             $("#cantPlato0").val("0");
     });

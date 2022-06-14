@@ -30,14 +30,9 @@ namespace BarStation.Services
         //Creamos las comandas en base al numero de platos y el id de la mesa
         public String[] CrearComandas(String Platos, int idMesa, string Comentario)
         {
-            String[] validar = new string[2];
-            int valirdar1 = new CAD.CADComandas().CrearComanda(new DTOMesas(idMesa, 1), Comentario);
-            if (valirdar1 != 0)
-            { 
+            String[] validar = new string[2];  
                 String[] men = Platos.Split('*');
-                validar = new CAD.CADPlatos().restarInventario(men, valirdar1);
-
-            }
+                validar = new CAD.CADPlatos().restarInventario(men, idMesa, Comentario); 
             
             return validar;
         }

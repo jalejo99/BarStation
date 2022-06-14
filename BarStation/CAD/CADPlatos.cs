@@ -194,12 +194,13 @@ namespace CAD
             return validar;
         }
 
-        public String[] restarInventario(String[] platos,int valirdar1)
+        public String[] restarInventario(String[] platos,int idMesa,String Comentario)
         {
             String[] val = new String[3] { null,null,null};
             List<DTOIngredientes> arringe = new List<DTOIngredientes>();
 
             int validar = 0;
+            int valirdar1 = 0;
             try
             {
                 for (int k = 0; k < platos.Length - 1; k++)
@@ -244,6 +245,7 @@ namespace CAD
                         }
                         if (validarInve==0)
                         {
+                            valirdar1 = new CAD.CADComandas().CrearComanda(new DTOMesas(idMesa, 1), Comentario);
                             for (int i = 0; i < arringe.Count; i++)
                             {
                                 ingre = arringe[i]; 

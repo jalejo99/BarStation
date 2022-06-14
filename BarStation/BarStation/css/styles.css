@@ -1,17 +1,28 @@
 :root {
-    --primario: #256d7b;
-    --primarioOscuro: #225c67;
-    --secudario: #e9954c;
+    --primario: #F2F2F2;
+    --primarioOscuro: #585858;
+    --secudario: #04593A;
     --secundarioOscuro: #cba400;
     --blanco: #fff;
     --negro: #000;
     --auxiliar: #9C27B0;
+    --text-color: #0D070D;
     --fuenteprincipal: 'Staatliches', cursive;
 }
 
 .btnMesa {
     cursor: pointer;
+    border: none;
+    border-radius: 5%;
+    height: 100px;
+    width: 190px;
+    align-self: center;
+    background-color: var(--blanco);
 }
+
+    .btnMesa:hover {
+        border: 2px dashed var(--text-color);
+    }
 
 .mesa_ov {
     background-color: var(--secudario);
@@ -46,7 +57,9 @@ a {
 }
 
 img {
-    width: 100%;
+    height: 80%;
+    width: 80%;
+    margin: 0;
 }
 
 .contenedor {
@@ -100,7 +113,7 @@ h4 {
 }
 
 .navegacion {
-    background-color: var(--primarioOscuro);
+    background-color: var(--secudario);
     padding: 0.5rem 0rem;
     display: flex;
     justify-content: center;
@@ -119,7 +132,7 @@ h4 {
 
     .navegacion__enlace--activo,
     .navegacion__enlace:hover {
-        color: var(--secudario);
+        color: var(--text-color);
     }
 
 /** Grid **/
@@ -132,31 +145,37 @@ h4 {
 
 /** productos **/
 .mesa {
-    background-color: var(--primarioOscuro);
+    height: 15rem;
+    display: flex;
     padding: 1rem;
+    justify-content: space-around;
     border-radius: 4px;
+    background-color: var(--blanco);
+    border: .1rem solid var(--text-color);
 }
 
 .mesa__nombre {
-    font-size: 3.8rem;
+    align-self: center;
+    font-size: 3.5rem;
     font-family: var(--fuenteprincipal);
-    margin: 2rem 0 3rem;
     text-align: center;
-    line-height: 1rem;
+    color: var(--text-color);
 }
 
 /*popups*/
 
 #modal {
     height: 100%;
-    background-color:transparent;
-    border:none;
+    background-color: transparent;
+    border: none;
 }
+
 #modal2 {
     height: 100%;
     background-color: transparent;
     border: none;
 }
+
 #popapp {
     height: 100%;
     background-color: transparent;
@@ -168,7 +187,7 @@ h4 {
 }
 
 .divSelect {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .modalestilo {
@@ -176,12 +195,17 @@ h4 {
     max-width: 40em;
     border-width: 5px;
     border-radius: 5px;
-    background-color: #256d7b;
-    border: 5px solid #e9954c;
+    background-color: var(--primario);
+    border: 5px solid var(--text-color);
     border-radius: 7px;
     text-align: center;
     letter-spacing: 2px;
+    padding: 5px;
 }
+
+    .modalestilo h4 {
+        color: var(--text-color);
+    }
 
 .botoncierre {
     height: 34px;
@@ -201,20 +225,23 @@ h4 {
     margin: 8px;
 }
 
-.inpCantPlato { 
+.inpCantPlato {
     height: 30px;
     width: 90px;
     border-radius: 7px;
     margin-left: 16px;
-    border: gray;
+    border: 1px solid var(--text-color);
 }
 
 .txtArea {
     height: 80px;
     width: 250px;
+    max-width: 100%;
+    min-width: 50%;
+    min-height: 50%;
     border-radius: 7px;
-    margin-left: 16px;
     border: gray;
+    border: 1px solid var(--text-color);
 }
 
 #slcPlatos {
@@ -235,3 +262,4 @@ h4 {
     .boton-orden:hover {
         background-color: rgb(13, 159, 45);
     }
+    

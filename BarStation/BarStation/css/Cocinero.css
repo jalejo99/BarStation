@@ -1,13 +1,13 @@
 ﻿:root {
-    --primario: #256d7b;
+    --primario: #F2F2F2;
     --primarioOscuro: #225c67;
-    --secudario: #e9954c;
+    --secudario: #04593A;
     --secundarioOscuro: #cba400;
     --blanco: #fff;
     --negro: #000;
     --auxiliar: #9C27B0;
     --fuenteprincipal: 'Staatliches', cursive;
-    --text-color: #34444f;
+    --text-color: #0D070D;
     --grisClaro: #b1b1b1;
 }
 
@@ -180,18 +180,37 @@ h4 {
 }
 
 .modalestilo {
-    min-width: 20em;
+    min-width: 28em;
+    max-width: 40em;
     border-width: 5px;
     border-radius: 5px;
-    background-color: #256d7b;
-    border-color: #e9954c;
+    background-color: var(--primario);
+    border: 5px solid var(--text-color);
+    border-radius: 7px;
     text-align: center;
     letter-spacing: 2px;
+    padding: 5px;
 }
 
-.bag{
-    border-color:red;
+    .modalestilo h4 {
+        color: var(--text-color);
+    }
+
+.txtArea {
+    height: 80px;
+    width: 250px;
+    max-width: 100%;
+    min-width: 50%;
+    min-height: 50%;
+    border-radius: 7px;
+    border: gray;
+    border: 1px solid var(--text-color);
 }
+
+.bag {
+    border-color: red;
+}
+
 .botoncierre {
     margin-top: 30px;
     margin-bottom: 10px;
