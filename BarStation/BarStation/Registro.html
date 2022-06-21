@@ -1,19 +1,23 @@
 ﻿<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/Login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
+    <header></header>
     <nav class="navegacion">
         <a class="navegacion__enlace activo" href="/Registro_plato.html">
             <span class="material-symbols-outlined">
@@ -31,44 +35,133 @@
             </span>Cerrar sesion
         </a>
     </nav>
-    <div class="formulario">
-        <h1>Registrar usuario</h1>
-        <div class="contenedor">
-            <div class="input-contenedor">
-                <i class="fas fa-address-card icon"></i>
-                <input type="text" id="inpCedula" placeholder="Cedula">
-
+    <!-- Contenedor de formulario -->
+    <div class="container-fluid col-md-10">
+        <!-- Encabezado de formulario -->
+        <h1 class="h1__help">Control de usuarios</h1>
+        <!-- Fila de campos -->
+        <div class="row justify-content-center py-2">
+            <div class="col-md-3">
+                <span class="input-text" id="inputGroup-sizing-lg">Cedula</span>
             </div>
-            <div class="input-contenedor">
-                <i class="fas fa-user icon"></i>
-                <input type="text" id="inpNombre" placeholder="Nombre">
+            <div class="col-md-3">
+                <input type="number" id="inpCedula" class="form-control" aria-lab el="Large" aria-describedby="inputGroup-sizing-sm">
             </div>
-            <div class="input-contenedor">
-                <i class="fas fa-user-circle icon"></i>
-                <input type="text" id="inpApellido" placeholder="Apellido">
+            <div class="col-md-3">
+                <span class="input-text" id="inputGroup-sizing-lg">Nombre</span>
             </div>
-            <div class="input-contenedor">
-                <i class="fas fa-envelope icon"></i>
-                <input type="text" id="inpCorreoElect" placeholder="Correo Electronico">
+            <div class="col-md-3">
+                <input type="text" id="inpNombre" class="form-control" aria-lab el="Large" aria-describedby="inputGroup-sizing-sm">
             </div>
-            <div class="input-contenedor">
-                <i class="fas fa-phone icon"></i>
-                <input type="text" id="inpCelular" placeholder="Celular">
+        </div>
+        <!-- Fila de campos -->
+        <div class="row justify-content-center py-2">
+            <div class="col-md-3">
+                <span class="input-text" id="inputGroup-sizing-lg">Apellido</span>
             </div>
-            <div class="input-contenedor">
-                <i class="fas fa-key icon"></i>
-                <input type="password" id="inpContraseña" placeholder="Contraseña">
+            <div class="col-md-3">
+                <input type="text" id="inpApellido" class="form-control" aria-lab el="Large" aria-describedby="inputGroup-sizing-sm">
             </div>
-            <div class="input-contenedor">
-                <i class="fas fa-bars icon"></i>
+            <div class="col-md-3">
+                <span class="input-text" id="inputGroup-sizing-lg">Correo electronico</span>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="inpCorreoElect" class="form-control" aria-lab el="Large" aria-describedby="inputGroup-sizing-sm">
+            </div>
+        </div>
+        <!-- Fila de campos -->
+        <div class="row justify-content-center py-2">
+            <div class="col-md-3">
+                <span class="input-text" id="inputGroup-sizing-lg">Celular</span>
+            </div>
+            <div class="col-md-3">
+                <input type="number" id="inpCelular" class="form-control" aria-lab el="Large" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="col-md-3">
+                <span class="input-text" id="inputGroup-sizing-lg">Contraseña</span>
+            </div>
+            <div class="col-md-3">
+                <input type="password" id="inpContraseña" class="form-control" aria-lab el="Large" aria-describedby="inputGroup-sizing-sm">
+            </div>
+        </div>
+        <!-- Fila de campos -->
+        <!-- Fila de botones -->
+        <div class="row justify-content-center py-2">
+            <div class="col-md-3">
+                <span class="input-text" id="inputGroup-sizing-lg">Rol</span>
+            </div>
+            <div class="col-md-3">
                 <select class="roles" id="slcRol"></select>
             </div>
-            <input type="button" id="btnRegistrar" value="Registrate" class="button"> 
+            <div class="col-md-3">
+                <span class="input-text" id="inputGroup-sizing-lg">Cargar usuario(s)</span>
+            </div>
+            <div class="col-md-3">
+                <button id="btn-carga-modal" class="btn col-12 m-1" onclick="modal.showModal();">
+                    <span class="material-symbols-outlined">
+                        upload_file
+                    </span>
+                </button>
+            </div>
         </div>
+        <!-- Fila de campos -->
+        <!-- Fila de botones -->
+        <div class="row justify-content-center py-2">
+            <div class="col-md-3">
+                <button id="btnLimpiar" class="btn col-12"> Limpiar campos</button>
+            </div>
+            <div class="col-md-3">
+                <button id="btnRegistrar" class="btn col-12"> Registrar</button>
+                <button id="btnModificarT" class="btn col-12 invisible"> Modificar</button>
+            </div>
+        </div>
+        <table class="table col-md-12">
+            <thead>
+                <tr>
+                    <th scope="col" class="col-md-1">Cedula</th>
+                    <th scope="col" class="col-md-1">Nombre</th>
+                    <th scope="col" class="col-md-1">Apellido</th>
+                    <th scope="col" class="col-md-1">Conreo electronico</th>
+                    <th scope="col" class="col-md-1">Celular</th>
+                    <th scope="col" class="col-md-1">Contraseña</th>
+                    <th scope="col" class="col-md-1">Rol</th>
+                    <th scope="col" class="col-md-1">Estado</th>
+                    <th scope="col" class="col-md-2">
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="BodyTabla"></tbody>
+        </table>
     </div>
-    <script src="Scripts/Sweetalert2.js"></script>
-    <script src="Scripts/jquery-1.8.0.min.js"></script>
+    <dialog id="modal">
+        <div class="modalestilo">
+            <h3 id="h3TituloCm">Carga de archivo</h3>
+            <input type="file" />
+            <div style="display: flex; align-content: center; justify-content:center">
+                <button id="btn-cargar-archivo" class="btn col-md-3 botoncierre">Cargar</button>
+                <button id="btn-cerrar-modal" class="btn col-md-3 botoncierre">Cerrar</button>
+            </div>
+        </div>
+    </dialog>
+
+    <footer class="footer">
+        <p class="footer__texto">BarStation - Todos los derechos reservados</p>
+    </footer>
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="Scripts/jquery-1.8.0.js"></script>
+    <link href="Content/css/select2.css" rel="stylesheet" />
     <script src="js/Login-Registro.js"></script>
+    <script src="Scripts/select2.js"></script>
+    <script src="Scripts/Sweetalert2.js"></script>
     <script>
         $(document).ready(function () {
             $("#aCerrarSesion").click(function () {

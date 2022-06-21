@@ -82,6 +82,32 @@ namespace CAD
             return validar;
         }
 
+        public String CrearIngredientesCSV(DTOIngredientes Ingre)
+        {
+            String estado = Ingre.getNombreIngredientes();
+            string mensaje = "Insertado correctamente";
+            int validar = 0;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "INSERT INTO `ingredientes` (`idIngredientes`, `nombreIngredientes`, `cantidadIngredientes`, `idEstado`, `cantMinIngredientes`, `idMedida`, `precioUni`) VALUES ('" + Ingre.getIdIngredientes() + "', '" + Ingre.getNombreIngredientes() + "', '" + Ingre.getCantidadIngredientes() + "', (SELECT idEstado FROM estados WHERE Estado='" + Ingre.getEstados() + "'), '" + Ingre.getCantMinIngredientes() + "',(SELECT idMedida FROM Medidas WHERE Medida= '" + Ingre.getMedida() + "'), '" + Ingre.getPrecioUni() + "')";
+                cmd.CommandType = System.Data.CommandType.Text;
+                con.Open();
+                validar = cmd.ExecuteNonQuery();
+                con.Close();
+                
+            }
+            catch (MySqlException ex)
+            {
+                mensaje =ex.Message;
+                con.Close();
+            }
+            estado += "/" + mensaje;
+
+            return estado;
+        }
+
 
         public List<DTOIngredientes> BuscarProductos()
         {

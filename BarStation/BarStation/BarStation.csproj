@@ -76,6 +76,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cargar.html" />
     <Content Include="Cocinero.html" />
     <Content Include="Comandas.html" />
     <Content Include="Content\css\select2.css" />
@@ -94,7 +95,7 @@
     <Content Include="js\Platos.js" />
     <Content Include="js\Registro.js" />
     <Content Include="Login.html" />
-    <Content Include="Registro.html" />
+    <Content Include="Usuarui.html" />
     <Content Include="Registro_plato.html" />
     <Content Include="Registro_inventario.html" />
     <Content Include="Scripts\i18n\af.js" />
@@ -165,6 +166,7 @@
     <Content Include="css\styles.css" />
     <Content Include="Scripts\Sweetalert2.js" />
     <Content Include="Services\ServiceComandas.svc" />
+    <Content Include="Registro.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

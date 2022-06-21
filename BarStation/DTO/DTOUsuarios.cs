@@ -17,6 +17,7 @@ namespace DTO
         private int idRol;
         private int idStado;
         private string rol;
+        private string estado;
 
         public DTOUsuarios()
         {
@@ -33,6 +34,20 @@ namespace DTO
             this.idRol = idRol;
             this.idStado = idStado;
         }
+
+        public string getEstado()
+        {
+            return estado;
+        }
+
+        /**
+         * @param cedulaUsu the cedulaUsu to set
+         */
+        public void setEstado(string estado)
+        {
+            this.estado = estado;
+        }
+
         public string getRol()
         {
             return rol;
@@ -171,6 +186,24 @@ namespace DTO
         public void setIdStado(int idStado)
         {
             this.idStado = idStado;
+        }
+
+        public String[] ConvertVector(List<DTOUsuarios> listUsuario)
+        {
+            String[] ListArr = new String[listUsuario.Count];
+            for (int i = 0; i < listUsuario.Count; i++)
+            {
+                DTOUsuarios usu = listUsuario[i];
+                ListArr[i] = usu.getCedulaUsu().ToString() + "|" + usu.getNombreUsu() + "|" + usu.getApellidoUsu()+"|"+usu.getCelularUsu()+"|"+usu.getCorreoUsu()+"|"+usu.getContraUsu() + "|" +usu.getRol() + "|" +usu.getEstado();
+            }
+            return ListArr;
+        }
+
+        public String ConvertVector1(DTOUsuarios usu)
+        {
+             
+                return usu.getCedulaUsu().ToString() + "|" + usu.getNombreUsu() + "|" + usu.getApellidoUsu() + "|" + usu.getCelularUsu() + "|" + usu.getCorreoUsu() + "|" + usu.getContraUsu() + "|" + usu.getRol() + "|" + usu.getEstado();
+              
         }
     }
 }

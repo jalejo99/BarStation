@@ -202,5 +202,64 @@ namespace BarStation.Services
             usu.setCorreoUsu(correos);
             return new CAD.CADUsuario().ValidarUsuarioCreado(usu);
         }
+
+        public string[] CSVIngredientes(String Dato)
+        {
+            String[] Info=Dato.Split('/');
+            String[] Retornable = new string[Info.Length - 3];
+            DTOIngredientes ObjIngre = new DTOIngredientes();
+            int i = 1,k=0;
+            do
+            {
+                String[] Info2 = Info[i].Split(',');
+                ObjIngre = new DTOIngredientes();
+                ObjIngre.setIdIngredientes(int.Parse(Info2[0]));
+                ObjIngre.setNombreIngredientes(Info2[1]);
+                ObjIngre.setCantidadIngredientes(int.Parse(Info2[2]));
+                ObjIngre.setCantMinIngredientes(Info2[3]);
+                ObjIngre.setPrecioUni(int.Parse(Info2[4]));
+                ObjIngre.setEstado(Info2[5]);
+                ObjIngre.setMedidas(Info2[6]);
+                Retornable[k] = new CAD.CADRegistrar().CrearIngredientesCSV(ObjIngre);
+                k++;
+                i++;
+            } while (!String.IsNullOrEmpty(Info[i]));
+            return Retornable;
+        }
+
+        public string[] CargarUsuarios()
+        {
+            return new DTO.DTOUsuarios().ConvertVector(new CAD.CADUsuario().CargarUsuarios());
+        }
+
+        public int DesactivarUsuario(int idIng)
+        {
+            return new CAD.CADUsuario().Desactivar_usuario(idIng);
+        }
+
+        public int ActivarUsuario(int idIng)
+        {
+            return new CAD.CADUsuario().Activar_usuario(idIng);
+        }
+
+        public string CargarUsuarioUno(int idIng)
+        {
+            return new DTO.DTOUsuarios().ConvertVector1(new CAD.CADUsuario().CargarUsuariosUno(idIng));
+        }
+
+        public int Actualizar_Usuario(String Usuario)
+        {
+            String[] men = Usuario.Split('|');
+            DTOUsuarios usu = new DTOUsuarios();
+            usu.setCedulaUsu(int.Parse(men[0]));
+            usu.setNombreUsu(men[1]);
+            usu.setApellidoUsu(men[2]);
+            usu.setCorreoUsu(men[3]);
+            usu.setCelularUsu(men[4]);
+            usu.setContraUsu(men[5]);
+            usu.setRol(men[6]);
+            return new CAD.CADUsuario().Actualizar_Usuario(usu,int.Parse(men[7]));
+        }
     }
 }
+

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestióon de archivos</title>
+    <script src="Scripts/jquery-1.8.0.js"></script>
+</head>
+<body>
+
+    <h2>Seleccionar para procesar y luego mostrar en tabla</h2>
+    <p>Selecciona el archivo a gestionar</p>
+    <input type="file" id="archivo2" accept=".csv" />
+    <h4>Contenido del archivo:</h4>
+    <div id="tablares"></div>
+    <hr />
+
+    <input type="button" name="Cargar" onclick="cargar()" value="Cargar" />
+
+
+
+    <script>
+
+      var enviar = "";
+    /**
+    * Importar y operar con .csv
+    **/
+    function crearTabla(data) {
+        const todasFilas = data.split(/\r?\n|\r/);
+        for (let fila = 0; fila < todasFilas.length; fila++) {
+            const celdasFila = todasFilas[fila].split(',');
+            enviar = enviar+celdasFila + "/";
+        }
+    }
+
+    function leerArchivo2(evt) {
+      let file = evt.target.files[0];
+      let reader = new FileReader();
+      reader.onload = (e) => {
+        crearTabla(e.target.result)
+      };
+      reader.readAsText(file);
+    }
+    document.querySelector('#archivo2')
+      .addEventListener('change', leerArchivo2, false);
+
+
+
+        function cargar() {
+            $.ajax({
+                type: "POST",
+                url: "Services/ServiceComandas.svc/CSVIngredientes",
+                data: '{"Dato":"' + enviar+'"}',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: false,
+                processdata: true,
+                success: function (datos) {
+                    var datos2 = datos.CSVIngredientesResult;
+                    alert(datos2);
+
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>

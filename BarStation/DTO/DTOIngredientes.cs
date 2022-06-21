@@ -19,6 +19,7 @@ namespace DTO
         private String medidas;
         private String estados;
 
+
         public DTOIngredientes()
         {
         }
