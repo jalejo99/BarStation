@@ -20,9 +20,9 @@
     background-color: var(--blanco);
 }
 
-    .btnMesa:hover {
-        border: 2px dashed var(--text-color);
-    }
+.btnMesa:hover {
+    border: 2px dashed var(--text-color);
+}
 
 .mesa_ov {
     background-color: var(--secudario);
@@ -126,14 +126,14 @@ h4 {
     margin-right: 1.5rem;
 }
 
-    .navegacion__enlace:last-of-type {
-        margin-right: 0rem;
-    }
+.navegacion__enlace:last-of-type {
+    margin-right: 0rem;
+}
 
-    .navegacion__enlace--activo,
-    .navegacion__enlace:hover {
-        color: var(--text-color);
-    }
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--text-color);
+}
 
 /** Grid **/
 .grid {
@@ -203,9 +203,9 @@ h4 {
     padding: 5px;
 }
 
-    .modalestilo h4 {
-        color: var(--text-color);
-    }
+.modalestilo h4 {
+    color: var(--text-color);
+}
 
 .botoncierre {
     height: 34px;
@@ -259,7 +259,58 @@ h4 {
     color: white;
 }
 
-    .boton-orden:hover {
-        background-color: rgb(13, 159, 45);
-    }
-    
+.boton-orden:hover {
+    background-color: rgb(13, 159, 45);
+}
+
+.btnNotify{
+    height:4rem;
+    width: 4rem;
+    margin: 0 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+    border: 3px solid var(--primario);
+    color: var(--primario);
+    background-color: var(--secudario);
+    transition: linear .5s;
+}
+
+.btnNotify.active {
+    color: var(--text-color);
+    background-color: var(--primario);
+    border: 3px solid var(--text-color);
+}
+
+.btnNotify.active::after{
+    position: relative  ;
+    transform: translateX(4rem);
+    height:4rem;
+    width: 4rem;
+}
+
+.btnNotify.active:hover, .btnNotify:hover{
+    box-shadow: 0px 0px 2rem .5rem rgba(255, 255, 255, .5);
+}
+
+.btnNotify span{
+    height: 100%;
+    width: 100%;
+    font-size: 2.25rem;
+    line-height: normal;
+}
+
+.btnNotify.active span{
+    transition: linear 2s;
+    animation: tambaleo 1s linear infinite;
+}
+
+@keyframes tambaleo {
+    0% {}
+    25% {transform: rotate(-10deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(10deg);}
+    100% {transform: rotate(0deg);}
+}
